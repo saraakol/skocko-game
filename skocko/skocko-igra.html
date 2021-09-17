@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel='stylesheet' type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="skocko-dodatno/jquery-1.11.3.min.js"></script>
+</head>
+<body onload="inic()" onresize="velicina()">
+    <div class="container-fluid">
+        <div id="igracA" class="boks" >
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica centriraj">Na potezu je igrac A</div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica centriraj">
+                    <input type="button" class="btn btn-light  " name="novaigra" id="novaigra" onclick="novaigra()" value="Nova igra" >&nbsp;&nbsp;
+                    <input type="button" class="btn btn-light  " name="pocni" id="pocni" onclick="start()" value="Start" ><span class="">&nbsp;&nbsp;&nbsp;</span>
+                    <div class="vreme " id="vremeeA">60</div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica">
+                    <br>
+                    <img class="img-thumbnail levo" id="111" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo" id="111">&nbsp;
+                    <img class="img-thumbnail levo" id="112" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  id="112">&nbsp;
+                    <img class="img-thumbnail levo"id="113" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  id="113">&nbsp;
+                    <img class="img-thumbnail levo" id="114" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo" id="114" >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp; 
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica111">&nbsp;</div>
+                    <div class="kockica levo" id="kockica112">&nbsp;</div>
+                    <div class="kockica levo" id="kockica113">&nbsp;</div>
+                    <div class="kockica levo" id="kockica114">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica ">
+                    <img class="img-thumbnail levo " id="121" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="122" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="123" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="124" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp;
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica121">&nbsp;</div>
+                    <div class="kockica levo" id="kockica122">&nbsp;</div>
+                    <div class="kockica levo" id="kockica123">&nbsp;</div>
+                    <div class="kockica levo" id="kockica124">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica">
+                    <img class="img-thumbnail levo" id="131" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="132" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="133" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="134" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp;
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica131">&nbsp;</div>
+                    <div class="kockica levo" id="kockica132">&nbsp;</div>
+                    <div class="kockica levo" id="kockica133">&nbsp;</div>
+                    <div class="kockica levo" id="kockica134">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica">
+                    <img class="img-thumbnail levo" id="141" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="142" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="143" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="144" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp;
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica141">&nbsp;</div>
+                    <div class="kockica levo" id="kockica142">&nbsp;</div>
+                    <div class="kockica levo" id="kockica143">&nbsp;</div>
+                    <div class="kockica levo" id="kockica144">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica">
+                    <img class="img-thumbnail levo" id="151" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="152" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="153" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="154" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp; 
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica151">&nbsp;</div>
+                    <div class="kockica levo" id="kockica152">&nbsp;</div>
+                    <div class="kockica levo" id="kockica153">&nbsp;</div>
+                    <div class="kockica levo" id="kockica154">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica">
+                    <img class="img-thumbnail levo" id="161" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="162" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="163" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="164" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp; 
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica161">&nbsp;</div>
+                    <div class="kockica levo" id="kockica162">&nbsp;</div>
+                    <div class="kockica levo" id="kockica163">&nbsp;</div>
+                    <div class="kockica levo" id="kockica164">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica">
+                    <img class="img-thumbnail levo" id="171" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="172" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="173" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="174" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp; 
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica171">&nbsp;</div>
+                    <div class="kockica levo" id="kockica172">&nbsp;</div>
+                    <div class="kockica levo" id="kockica173">&nbsp;</div>
+                    <div class="kockica levo" id="kockica174">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica ">
+                    <img class="img-thumbnail levo" id="181" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="182" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="183" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="184" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <img class="img-thumbnail levo ponudjen" src="skocko-dodatno/20084.png" alt="" name="1"  >
+                    <img class="img-thumbnail levo ponudjen" src="skocko-dodatno/220px-Playing_card_diamond_A.svg.png" alt="" name="2"  >
+                    <img class="img-thumbnail levo ponudjen" src="skocko-dodatno/as_herc.jpg" alt="" name="3"  >
+                    <img class="img-thumbnail levo ponudjen" src="skocko-dodatno/1200px-Playing_card_club_A.svg.png" alt="" name="4"  >
+                    <img class="img-thumbnail levo ponudjen" src="skocko-dodatno/99735571c6bb42bb8fd8f91b5db8956d.jpg" alt="" name="5" >
+                    <img class="img-thumbnail levo ponudjen" src="skocko-dodatno/pik.png" alt="" name="6"  >
+                           
+                    
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+                
+         </div>
+         <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+            <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica" style="text-align: right; ">
+                <input type="button" class="btn btn-light " name="" id="autor" style="margin-bottom: 5px;" value="O Autoru" >&nbsp;</div>
+            <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+        <div id="igracB" class="boks" >
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica centriraj">Na potezu je igrac B</div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica centriraj">
+                    <input type="button" class="btn btn-light  " name="novaigra" id="novaigra" onclick="novaigra()" value="Nova igra" >&nbsp;&nbsp;
+                    <input type="button" class="btn btn-light  " name="pocni" id="pocni" onclick="start()" value="Start" ><span class="">&nbsp;&nbsp;&nbsp;</span>
+                    <div class="vreme" id="vremeeB">60</div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-2 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica">
+                    <br>
+                    <img class="img-thumbnail levo" id="211" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="212" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="213" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="214" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp; 
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica211">&nbsp;</div>
+                    <div class="kockica levo" id="kockica212">&nbsp;</div>
+                    <div class="kockica levo" id="kockica213">&nbsp;</div>
+                    <div class="kockica levo" id="kockica214">&nbsp;</div>
+                   
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica ">
+                    <img class="img-thumbnail levo" id="221" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="222" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="223" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="224" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp;
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica221">&nbsp;</div>
+                    <div class="kockica levo" id="kockica222">&nbsp;</div>
+                    <div class="kockica levo" id="kockica223">&nbsp;</div>
+                    <div class="kockica levo" id="kockica224">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica">
+                    <img class="img-thumbnail levo" id="231" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="232" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="233" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="234" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp;
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica231">&nbsp;</div>
+                    <div class="kockica levo" id="kockica232">&nbsp;</div>
+                    <div class="kockica levo" id="kockica233">&nbsp;</div>
+                    <div class="kockica levo" id="kockica234">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica">
+                    <img class="img-thumbnail levo" id="241" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="242" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="243" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="244" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp;
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica241">&nbsp;</div>
+                    <div class="kockica levo" id="kockica242">&nbsp;</div>
+                    <div class="kockica levo" id="kockica243">&nbsp;</div>
+                    <div class="kockica levo" id="kockica244">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica">
+                    <img class="img-thumbnail levo" id="251" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="252" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="253" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="254" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp; 
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica251">&nbsp;</div>
+                    <div class="kockica levo" id="kockica252">&nbsp;</div>
+                    <div class="kockica levo" id="kockica253">&nbsp;</div>
+                    <div class="kockica levo" id="kockica254">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica">
+                    <img class="img-thumbnail levo" id="261" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="262" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="263" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="264" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp; 
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica261">&nbsp;</div>
+                    <div class="kockica levo" id="kockica262">&nbsp;</div>
+                    <div class="kockica levo" id="kockica263">&nbsp;</div>
+                    <div class="kockica levo" id="kockica264">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica">
+                    <img class="img-thumbnail levo" id="271" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="272" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="273" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="274" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo manja" src="skocko-dodatno/images.png" alt="" name="belo"  >&nbsp; 
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <div class="kockica levo" id="kockica271">&nbsp;</div>
+                    <div class="kockica levo"id="kockica272">&nbsp;</div>
+                    <div class="kockica levo"id="kockica273">&nbsp;</div>
+                    <div class="kockica levo"id="kockica274">&nbsp;</div>
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+                <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica ">
+                    <img class="img-thumbnail levo" id="281"  src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo">&nbsp;
+                    <img class="img-thumbnail levo" id="282" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="283" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <img class="img-thumbnail levo" id="284" src="skocko-dodatno/51UW1849rJL._AC_SY355_.jpg" alt="" name="belo"  >&nbsp;
+                    <br class="novired" style="display: none;"><br class="novired"style="display: none;"><br class="novired" style="display: none;">
+                    <img class="img-thumbnail levo ponudjen" src="skocko-dodatno/20084.png" alt="" name="1"  >
+                    <img class="img-thumbnail levo ponudjen" src="skocko-dodatno/220px-Playing_card_diamond_A.svg.png" alt="" name="2"  >
+                    <img class="img-thumbnail levo ponudjen" src="skocko-dodatno/as_herc.jpg" alt="" name="3"  >
+                    <img class="img-thumbnail levo ponudjen" src="skocko-dodatno/1200px-Playing_card_club_A.svg.png" alt="" name="4"  >
+                    <img class="img-thumbnail levo ponudjen" src="skocko-dodatno/99735571c6bb42bb8fd8f91b5db8956d.jpg" alt="" name="5" >
+                    <img class="img-thumbnail levo ponudjen" src="skocko-dodatno/pik.png" alt="" name="6"  >
+                           
+                    
+                    
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">&nbsp;</div>
+                
+         </div>
+         <div class="row">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-sm-2 col-1">&nbsp;</div>
+            <div class="col-xl-6 col-lg-7 col-md-9 col-sm-7 col-9 igrica" style="text-align: right; "><input type="button" class="btn btn-light " name="" id="autor" style="margin-bottom: 5px;" value="O Autoru" >&nbsp;</div>
+            <div class="col-xl-3 col-lg-3 col-md-2 col-sm-3 col-2">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+   
+    </div>
+</body>
+</html>

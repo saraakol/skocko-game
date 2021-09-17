@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel='stylesheet' type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="skocko-dodatno/jquery-1.11.3.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body onload="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-2 col-sm-1 col-1">&nbsp;</div>
+            <div class="col-lg-6 col-md-8 col-sm-10 col-10 centaruputstva">
+                <h4>Uputstvo</h4>
+                <p>Cilj igre je pogoditi kombinaciju znakova iz prvih 7 pokusaja. <br><br>
+                   Igrac A bira kombinaciju igracu B i obrnuto. <br><br>
+                   Igra tece tako sto igraci naizmenicno pokusavaju da pogode zadatu kombinaciju birajuci 4 znaka. 
+                   Crveni kvadratic je pogodak na pravom mestu, Zuti kvadratic je pogodak ali na pogresnom mestu.  
+                   Igrac koji prvi pogodi kombinaciju je pobednik i igra se tada zavrsava. Ako nijedan igrac ne pogodi kombinaciju znakova nakon sedmog pokusaja, ishod igre je neresen. Ako nekom od igraca ponestane vremena, onda se igra zaustavlja
+                   i pobednik je igrac kome je preostalo vremena. <br><br>
+                   Igra se moze igrati sve dok jedan od igraca ne pogodi zadatu kombinaciju, nakon cega se mora zapoceti nova biranjem novih kombinacija znakova.
+                   </p>
+                    <div class="prihaceno">
+                        <form action="" name="prvaforma">
+                            <label for="">Igrac A upoznat sa pravilima </label>
+                            <input type="checkbox" name="cekiranouputstvoa" id="potvrdaa"><br>
+                            <label for="">Igrac B upoznat sa pravilima </label>
+                            <input type="checkbox" name="cekiranouputstvob" id="potvrdab">
+                            <br><br>
+                            <input type="button" class="btn btn-light" name="potvrdiuputs" id="dugmeupu" value="Potvrdi" onclick="uputstvo()">
+                        </form>
+                    </div>
+                   
+            </div>
+            <div class="col-lg-3 col-md-2 col-sm-1 col-1">&nbsp;</div>
+        </div>
+        
+    </div>
+</body>
+</html>

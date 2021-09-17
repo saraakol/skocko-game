@@ -1,0 +1,73 @@
+body{
+    background-image: url(skocko-dodatno/gamepad-joystick-game-controller-seamless-pattern-devices-video-games-esports-gamer-white-background-hand-drawn-vector-148103896.jpg);
+     /*  min-width:1000px;  */
+     /*  width: auto !important;  */
+     /*   width:1000px;  */
+}
+.centaruputstva{
+    background-color: lightpink;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 120px;
+    text-align: center;
+    padding-top: 30px;
+
+}
+.centaruputstva p{
+    margin: 50px;
+    text-align: justify;
+}
+.centriraj{
+    text-align: center;
+    padding-top: 15px;
+}
+.prihaceno{
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+.zadavanjekombinacije img{
+    width: 45px;
+    height: 45px;
+}
+.zadavanjekombinacije{
+    margin: 50px;
+    text-align: center;
+}
+.igrica{
+    background-color: lightpink ;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+
+}
+.boks{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.igrica img{
+    width: 42px;
+    height: 42px;
+}
+.kockica{
+    background-color: gray;
+    width: 42px;
+    height: 42px;
+}
+.vreme{
+    background-color: lightgray;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+.levo{
+    float: left;
+    margin: 5px;
+}
+.manja{
+    width: 30px  !important;
+    height: 30px !important;
+}
